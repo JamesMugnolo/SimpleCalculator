@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+apply from: 'test.gradle'
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': 'CalculatorApp',
+                    'Implementation-Version': '1.0.0',
+                    'Main-Class': 'com.lab8.App')
+        archiveFileName.set("CalculatorApp.jar")
+    }
+}
+
